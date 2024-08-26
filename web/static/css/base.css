@@ -11,50 +11,96 @@
   color: #c31919;
 }
 
-#footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+
+#enhanced-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 0;
+  font-size: 0.9rem;
 }
 
-#footer h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+#enhanced-footer h4 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-#footer a {
-  color: #fff;
+#enhanced-footer a {
+  color: #ccc;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-#footer a:hover {
-  text-decoration: underline;
-  color: red;
+#enhanced-footer a:hover {
+  color: #ff6f61;
 }
 
-#footer .container {
+#enhanced-footer .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-#footer .row {
+#enhanced-footer .row {
   margin-bottom: 20px;
 }
 
-#footer .back-to-top {
-  display: block;
+/* Social Media Icons */
+#enhanced-footer .social-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#enhanced-footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#enhanced-footer .social-icons img:hover {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+#enhanced-footer .social-icons img:hover::before {
+  background-color: #ff6f61;
+}
+
+/* Legal Information */
+#enhanced-footer .legal {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+#enhanced-footer .back-to-top {
+  display: inline-block;
   text-align: center;
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #ff6f61;
+  transition: color 0.3s ease;
+}
+
+#enhanced-footer .back-to-top i {
+  font-size: 1.8rem;
+}
+
+#enhanced-footer .back-to-top:hover {
   color: #fff;
 }
 
-#footer .back-to-top i {
-  font-size: 1.5rem;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  #footer .col-sm-12 {
-      margin-bottom: 20px;
+  #enhanced-footer .col-sm-12 {
+      margin-bottom: 30px;
+  }
+
+  #enhanced-footer .social-icons {
+      margin-top: 20px;
   }
 }

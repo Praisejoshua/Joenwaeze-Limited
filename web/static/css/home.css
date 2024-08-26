@@ -14,6 +14,14 @@
     font-size: 1rem;
 }
 
+/* Adjust carousel caption positioning on mobile */
+@media (max-width: 768px) {
+    .carousel-caption {
+        margin-top: 60px; /* Adjust this value as needed */
+        padding: 10px;
+    }
+}
+
 .text-with-image {
     display: flex;
     align-items: center;

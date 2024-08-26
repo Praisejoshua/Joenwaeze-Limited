@@ -25,7 +25,7 @@ def contact_page():
         first_name = form.first_name.data
         last_name = form.last_name.data
         email = form.email.data
-        message = form.text.data
+        message= form.text.data
 
         save_mail = ContactMessage(first_name = first_name,
                                    last_name = last_name,
@@ -39,8 +39,11 @@ def contact_page():
         send_message(
             subject= "New message from JOENWAEZE LIMITED",
             sender=email,
-            recipients=["praizjoshua@gmail.com"],
-            body=message
+            recipients=["joenwaezelimited@gmail.com"],
+            body = f"""
+    From : {form.first_name.data} <{form.email.data}>
+    Message : {message}
+"""
         )
     return render_template("contact.html", form=form)
 
@@ -100,8 +103,11 @@ def service_page():
         send_message(
             subject="New message from JOENWAEZE LIMITED",
             sender=email,
-            recipients=["praizjoshua@gmail.com"],
-            body=message
+            recipients=["joenwaezelimited@gmail.com"],
+            body = f"""
+    From : {form.first_name.data} <{form.email.data}>
+    Message : {message}
+"""
         )
         return redirect(url_for('service_page'))  
 

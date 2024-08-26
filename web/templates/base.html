@@ -46,27 +46,27 @@
          </div>
       </nav>
       {% block content %}{% endblock %}
-<!-- Footer -->
-<footer id="footer">
+<!-- Enhanced Footer -->
+<footer id="enhanced-footer">
    <div class="container">
       <div class="row">
          <!-- Company Information -->
-         <div class="col-md-4 col-sm-12">
+         <div class="col-lg-4 col-md-6 col-sm-12">
             <h4>About Joenwaeze Limited</h4>
             <p>We provide high-quality scrap materials and innovative recycling solutions. Our expertise ensures reliable supply chain solutions and commitment to sustainability.</p>
-            <p><a href="#">Learn More</a></p>
+            <p><a href="{{ url_for('products_page') }}" class="btn btn-primary">Learn More</a></p>
          </div>
          <!-- Quick Links -->
-         <div class="col-md-2 col-sm-6">
+         <div class="col-lg-2 col-md-6 col-sm-6">
             <h4>Quick Links</h4>
             <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Services</a></li>
-               <li><a href="#">Contact</a></li>
+               <li><a href="{{ url_for('home_page') }}">Home</a></li>
+               <li><a href="{{ url_for('service_page') }}">Services</a></li>
+               <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
             </ul>
          </div>
          <!-- Industry Resources -->
-         <div class="col-md-2 col-sm-6">
+         <div class="col-lg-2 col-md-6 col-sm-6">
             <h4>Industry Resources</h4>
             <ul>
                <li><a href="#">FAQs</a></li>
@@ -74,15 +74,21 @@
             </ul>
          </div>
          <!-- Contact Information -->
-         <div class="col-md-4 col-sm-12">
+         <div class="col-lg-4 col-md-6 col-sm-12">
             <h4>Contact Us</h4>
-            <p><i class="fa fa-map-marker"></i>Pantakar, Apo, Abuja</p>
+            <p><i class="fa fa-map-marker"></i> Pantakar, Apo, Abuja</p>
             <p><i class="fa fa-phone"></i> (+234) 803 581 7812</p>
-            <p><i class="fa fa-envelope"></i> support@joenwaeze.com</p>
+            <p><i class="fa fa-envelope"></i> joenwaezelimited@gmail.com</p>
+            <div class="social-icons">
+               <img src="../static/icons/intagram.png" alt="Instagram">
+               <img src="../static/icons/linkedin.png" alt="Instagram">
+               <img src="../static/icons/twitter.png" alt="Instagram">
+               <img src="../static/icons/facebook.png" alt="Instagram">
+            </div>
          </div>
       </div>
       <!-- Legal Information -->
-      <div class="row">
+      <div class="row legal">
          <div class="col-md-12 text-center">
             <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
          </div>
@@ -90,11 +96,12 @@
       <!-- Back to Top Button -->
       <div class="row">
          <div class="col-md-12 text-center">
-            <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i> Back to Top</a>
+            <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
          </div>
       </div>
    </div>
 </footer>
+
 
       <!-- Bootstrap JS and dependencies -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
