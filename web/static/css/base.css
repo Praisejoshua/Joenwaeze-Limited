@@ -1,13 +1,18 @@
+.navbar-light {
+  background-color: #f8f9fa; /* Light background color */
+}
+
+
 .navbar-brand {
   max-width: 150px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
   color: #fff;
   font-weight: bold;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover {
   color: #c31919;
 }
 
@@ -107,43 +112,43 @@
 
 /* Footer links section styling */
 #enhanced-footer h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #f8f9fa;
-  border-bottom: 2px solid #f8f9fa;
-  padding-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f8f9fa;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
 }
 
 #enhanced-footer ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 #enhanced-footer ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #enhanced-footer ul li a {
-  color: #f8f9fa;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease-in-out;
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
 }
 
 #enhanced-footer ul li a:hover {
-  color: #c31919; /* Hover color */
-  text-decoration: underline;
+    color: #c31919; /* Hover color */
+    text-decoration: underline;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  #enhanced-footer h4 {
-      font-size: 1.3rem;
-  }
+    #enhanced-footer h4 {
+        font-size: 1.3rem;
+    }
 
-  #enhanced-footer ul li a {
-      font-size: 1rem;
-  }
+    #enhanced-footer ul li a {
+        font-size: 1rem;
+    }
 }
 
