@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{% block title %}{% endblock %}</title>
+      <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <style>
+         /* Custom styles here */
+      </style>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="/">
+         <img src="{{ url_for('static', filename='images/logo3.png') }}" alt="logo" class="d-inline-block align-top" style="width: 150px;">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('home_page')}}">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('about_page')}}">About</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Inventory</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="{{ url_for('products_page') }}">Products</a>
+                     <a class="dropdown-item" href="{{url_for('service_page')}}">Services</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="#">Track</a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('contact_page')}}">Contact</a>
+               </li>
+               <li class="nav-item ml-lg-5">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Welcome to Joenwaeze Limited</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      {% block content %}{% endblock %}
+<!-- Footer -->
+<footer id="footer">
+   <div class="container">
+      <div class="row">
+         <!-- Company Information -->
+         <div class="col-md-4 col-sm-12">
+            <h4>About Joenwaeze Limited</h4>
+            <p>We provide high-quality scrap materials and innovative recycling solutions. Our expertise ensures reliable supply chain solutions and commitment to sustainability.</p>
+            <p><a href="#">Learn More</a></p>
+         </div>
+         <!-- Quick Links -->
+         <div class="col-md-2 col-sm-6">
+            <h4>Quick Links</h4>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+         </div>
+         <!-- Industry Resources -->
+         <div class="col-md-2 col-sm-6">
+            <h4>Industry Resources</h4>
+            <ul>
+               <li><a href="#">FAQs</a></li>
+               <li><a href="#">Blog</a></li>
+            </ul>
+         </div>
+         <!-- Contact Information -->
+         <div class="col-md-4 col-sm-12">
+            <h4>Contact Us</h4>
+            <p><i class="fa fa-map-marker"></i>Pantakar, Apo, Abuja</p>
+            <p><i class="fa fa-phone"></i> (+234) 803 581 7812</p>
+            <p><i class="fa fa-envelope"></i> support@joenwaeze.com</p>
+         </div>
+      </div>
+      <!-- Legal Information -->
+      <div class="row">
+         <div class="col-md-12 text-center">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+         </div>
+      </div>
+      <!-- Back to Top Button -->
+      <div class="row">
+         <div class="col-md-12 text-center">
+            <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i> Back to Top</a>
+         </div>
+      </div>
+   </div>
+</footer>
+
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link href="{{ url_for('static', filename='css/services.css') }}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content %}
+    <div class="container my-5">
+        <header class="text-center mb-5">
+            <h1>Our Services</h1>
+            <p>At Joenwaeze Limited, we offer a range of high-quality services tailored to meet your scrap management and recycling needs.</p>
+        </header>
+
+        <section class="mb-5">
+            <h2>Scrap Management</h2>
+            <p>We provide efficient scrap management solutions, ensuring proper disposal and recycling of various materials. Our services include:</p>
+            <ul>
+                <li>Collection and transportation</li>
+                <li>Sorting and processing</li>
+                <li>Recycling</li>
+            </ul>
+            <a href="{{ url_for('products_page') }}" class="btn btn-primary">Learn More</a>
+        </section>
+
+        <section class="mb-5">
+            <h2>Recycling Solutions</h2>
+            <p>Our advanced recycling solutions help industries minimize waste and maximize resource utilization. We offer:</p>
+            <ul>
+                <li>Electronic waste recycling</li>
+                <li>Metal and plastic recycling</li>
+                <li>Battery recycling</li>
+            </ul>
+            <a href="{{ url_for('products_page') }}" class="btn btn-primary">Learn More</a>
+        </section>
+
+        <section class="mb-5">
+            <h2>Custom Solutions</h2>
+            <p>We tailor our services to meet specific client needs, providing customized solutions for:</p>
+            <ul>
+                <li>Specialized waste management</li>
+                <li>On-site recycling services</li>
+                <li>Consulting and audits</li>
+            </ul>
+            <a href="{{ url_for('products_page') }}" class="btn btn-primary">Learn More</a>
+        </section>
+
+        <section class="mb-5">
+            <h2>Testimonials</h2>
+            <blockquote class="blockquote">
+                <p>"Joenwaeze Limited's recycling solutions have significantly improved our waste management processes. Highly recommend their services!"</p>
+                <footer class="blockquote-footer">Client A</footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>"Professional, reliable, and efficient. Their scrap management services are top-notch!"</p>
+                <footer class="blockquote-footer">Client B</footer>
+            </blockquote>
+        </section>
+
+        <section class="mb-5">
+            <h2>Contact Us</h2>
+            <!-- Contact Form -->
+            <div class="col-md-8 mx-auto">
+                <form method="POST" action="{{ url_for('service_page') }}" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        {{ form.first_name.label(class="form-label") }}
+                        {{ form.first_name(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.last_name.label(class="form-label") }}
+                        {{ form.last_name(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email.label(class="form-label") }}
+                        {{ form.email(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.text.label(class="form-label") }}
+                        {{ form.text(class="form-control") }}
+                    </div>
+                        <!-- Flash messages display -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="alert-container">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-lg btn-primary") }}
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+    </div>
+    {% endblock %}
+</body>
+</html>

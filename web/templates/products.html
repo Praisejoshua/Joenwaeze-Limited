@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link href="{{ url_for('static', filename='css/products.css') }}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content %}
+    <div class="container">
+        <div class="section-title">
+            <h1>Our Products</h1>
+            <p>Explore our range of products designed to meet your needs.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/l.png') }}" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <p class="card-text">We provide specialized services for industrial scrap, including large equipment and machinery parts. Efficient recycling, and material recovery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='../static/images/whatsApp/5.jpeg') }}" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <p class="card-text">We manage alkaline battery scrap through efficient methods . Our services cover collection, processing, and proper disposal, minimizing environmental impact</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='../static/images/whatsApp/8.jpeg') }}" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <p class="card-text">We handle all types of battery scrap, ensuring safe and environmentally friendly recycling processes. Our services include collection and proper disposal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='../static/images/whatsApp/2.jpeg') }}" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <p class="card-text">Offering a range of steel scrap products, ideal for recycling and reuse in various industries, ensures maximum recovery of valuable aluminum..</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

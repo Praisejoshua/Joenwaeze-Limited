@@ -1,0 +1,26 @@
+/* Add this to your existing CSS or base.html */
+#loadingSpinner {
+    display: none;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: .4em;
+}
+
+.d-none {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact page</title>
+  <link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+</head>
+<body>
+  {% extends 'base.html' %}
+
+{% block title %}
+Contact Page
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <!-- Flash messages display -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Contact Form -->
+        <div class="col-md-6 mb-4">
+            <h1 class="mb-4">Contact Us</h1>
+            <form method="POST" action="{{ url_for('contact_page') }}" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <div class="mb-3">
+                    {{ form.first_name.label(class="form-label") }}
+                    {{ form.first_name(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.last_name.label(class="form-label") }}
+                    {{ form.last_name(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.email.label(class="form-label") }}
+                    {{ form.email(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.text.label(class="form-label") }}
+                    {{ form.text(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.submit(class="btn btn-lg btn-primary") }}
+                </div>
+            </form>
+        </div>
+
+        <!-- Contact Information and Map -->
+        <div class="col-md-6">
+            <div class="contact-info mb-4">
+                <h2>Contact Information</h2>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ url_for('static', filename='icons/house.svg') }}" alt="home icon" class="me-2">
+                    <p class="mb-0">Pantakar, Apo, Abuja</p>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ url_for('static', filename='icons/telephone.svg') }}" alt="telephone icon" class="me-2">
+                    <p class="mb-0">(+234) 803 581 7812</p>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ url_for('static', filename='icons/envelope.svg') }}" alt="envelope icon" class="me-2">
+                    <p class="mb-0">support@joenwaeze.com</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d7.482177!3d9.043154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z5rOo6Ziq6p6I5b3L5b3L5Lw!5e0!3m2!1sen!2sng!4v1630497096683!5m2!1sen!2sng"
+                    allowfullscreen=""
+                    loading="lazy"
+                    class="w-100"
+                    height="400"
+                    frameborder="0"
+                    aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
+

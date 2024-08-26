@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Page</title>
+      <!-- My Css -->
+      <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+   </head>
+   <body>
+      {% extends 'base.html' %}
+      {% block content %}
+      <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="{{ url_for('static', filename='images/n.jpg') }}" class="d-block w-100" alt="First slide">
+               <div class="carousel-caption">
+                  <h5>Welcome to Joenwaeze Limited</h5>
+                  <p>Your trusted partner in scrap dealing and recycling solutions.</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="{{ url_for('static', filename='images/l.png') }}" class="d-block w-100" alt="Second slide">
+               <div class="carousel-caption">
+                  <h5>Comprehensive Scrap Services</h5>
+                  <p>We offer a wide range of scrap dealing services, including condemned batteries, aluminum, and more.</p>
+               </div>
+            </div>
+            <div class="carousel-item">
+               <img src="{{ url_for('static', filename='images/x.jpg') }}" class="d-block w-100" alt="Third slide">
+               <div class="carousel-caption">
+                  <h5>Quality You Can Trust</h5>
+                  <p>Committed to providing high-quality materials and exceptional customer service.</p>
+               </div>
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+      <!-- Text with Image -->
+      <section class="text-with-image">
+         <img src="{{ url_for('static', filename='images/oo.png') }}" class="side-image1" alt="Side Image">
+         <div class="text-content">
+            <h2>Joenwaeze Limited Scrap Management Solutions</h2>
+            <p>Joenwaeze Limited delivers a robust, scalable solution for managing scrap resources, powered by advanced technology. Our specialized services cater to a range of scrap materials, including condemned batteries and aluminum, ensuring efficient processing and maximum value.</p>
+            <a href="{{ url_for('about_page') }}" class="learnmore-btn">Learn More</a>
+         </div>
+      </section>
+      <!-- Containers -->
+      <section class="containers">
+         <div class="container-item">
+            <img src="{{ url_for('static', filename='../static/images/whatsApp/3.jpeg') }}" class="side-image" alt="Industry Supply Chain Solutions">
+            <div class="text-container">
+               <h4>INDUSTRY SUPPLY CHAIN SOLUTIONS</h4>
+               <p>Joenwaeze Limited specializes in providing high-quality scrap materials to industries. Leveraging our extensive network and expertise, we ensure reliable and efficient supply chain solutions to meet the demands of various industrial sectors.</p>
+            </div>
+         </div>
+         <div class="container-item">
+            <img src="{{ url_for('static', filename='images/v.jpeg') }}" class="side-image" alt="Sustainability Initiatives">
+            <div class="text-container">
+               <h4>SUSTAINABILITY INITIATIVES</h4>
+               <p>Joenwaeze Limited is committed to promoting sustainability in the scrap industry. By ensuring efficient recycling processes and responsible sourcing, we help industries reduce their environmental impact while maximizing resource utilization.</p>
+            </div>
+         </div>
+         <div class="container-item">
+            <img src="{{ url_for('static', filename='../static/images/whatsApp/13.jpeg') }}" class="side-image" alt="Innovative Solutions">
+            <div class="text-container">
+               <h4>INNOVATIVE SOLUTIONS</h4>
+               <p>Our cutting-edge technology and innovative approaches allow Joenwaeze Limited to provide unparalleled scrap management solutions. We focus on delivering customized services that drive operational efficiency and add significant value to your business.</p>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+   </body>
+</html>

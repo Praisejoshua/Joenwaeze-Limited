@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About Page</title>
+      <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+   </head>
+   <body>
+      {% extends 'base.html' %}
+      {% block content %}
+      <div class="container mt-5">
+         <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+               <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Company Overview</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="link1-tab" data-toggle="tab" href="#link1" role="tab" aria-controls="link1" aria-selected="false">Services</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="link2-tab" data-toggle="tab" href="#link2" role="tab" aria-controls="link2" aria-selected="false">Solutions</a>
+            </li>
+         </ul>
+         <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+               <div class="side-image">
+                  <div>
+                     <h2 class="mt-3">Company Overview</h2>
+                     <p>Joenwaeze Limited specializes in providing high-quality scrap materials to industries. Leveraging our extensive network and expertise, we ensure reliable and efficient supply chain solutions to meet the demands of various industrial sectors.</p>
+                  </div>
+                  <div class="over-image">
+                     <img src="{{ url_for('static', filename='../static/images/whatsApp/11.jpeg') }}" alt="Company Overview Image">
+                     <img src="{{ url_for('static', filename='../static/images/whatsApp/6.jpeg') }}" alt="Company Overview Image">
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane fade" id="link1" role="tabpanel" aria-labelledby="link1-tab">
+               <h2 class="mt-3">Services</h2>
+               <p>Our services include consultancy, custom developments, and innovative solutions tailored to match your business needs. We provide comprehensive support to help optimize processes and streamline your operations.</p>
+               <div class="wider-image">
+                  <img src="{{ url_for('static', filename='../static/images/whatsApp/1.jpeg') }}" alt="Service Image">
+                  <a href="{{ url_for('service_page') }}" class="btn btn-primary mt-3">Learn More</a>
+               </div>
+            </div>
+            <div class="tab-pane fade" id="link2" role="tabpanel" aria-labelledby="link2-tab">
+               <h2 class="mt-3">Solutions</h2>
+               <p>Our cutting-edge technology and innovative approaches allow us to provide unparalleled scrap management solutions. We focus on delivering customized services that drive operational efficiency and add significant value to your business.</p>
+               <div class="wider-image">
+                  <img src="{{ url_for('static', filename='../static/images/whatsApp/12.jpeg') }}" alt="Service Image">
+                  <a href="{{ url_for('service_page') }}" class="btn btn-primary mt-3">Learn More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endblock %}
+   </body>
+</html>

@@ -1,0 +1,42 @@
+.over-image{
+    margin-top: 1rem;
+    display:flex;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .over-image {
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .over-image {
+        display: block;
+        margin-top: 1rem;
+    }
+
+
+    .over-image img {
+        width: 100%;
+        margin-bottom: 1rem; /* Add space between images on small screens */
+    }
+}
+
+/* Ensure the wider image and button are styled properly */
+.wider-image {
+    position: relative;
+    width: 100%;
+}
+
+.wider-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.wider-image .btn {
+    display: block;
+    margin: 1rem auto; /* Center the button */
+}
